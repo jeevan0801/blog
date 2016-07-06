@@ -412,6 +412,111 @@
 
 
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/blog/2016/01/06/Tomcat8 使用 Https/" itemprop="url">
+                  Unbenannt
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2016-01-06T00:01:49+08:00" content="2016-01-06">
+              2016-01-06
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#Tomcat8 使用 Https</p>
+<p>##1. 使用 JDK 工具生成证书文件<br>使用 JDK 的<code>keytool</code>工具, 这个命令和<code>java</code>在一个目录下, mac 下的路径在: </p>
+<blockquote>
+<p>/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/keytool</p>
+</blockquote>
+<p><img src="./_image/2016-01-06 00-02-35.jpg" alt=""></p>
+<p>使用如下指令生成证书文件到指定路径:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -alias tomcat -keyalg  RSA -keystore ~/tomcatKeyStoreFile -validity 2000</div></pre></td></tr></table></figure></p>
+<p>然后就会在当前用户的根目录下生成一个<code>tomcatKeyStoreFile</code>的文件.</p>
+<p>##2.Server.xml 的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> &lt;Connector port=&quot;8443&quot; </div><div class="line">protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;</div><div class="line">maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot; scheme=&quot;https&quot; secure=&quot;true&quot;</div><div class="line">clientAuth=&quot;false&quot; sslProtocol=&quot;TLS&quot;</div><div class="line">keystoreFile=&quot;/Users/xxx/tomcatKeyStoreFile&quot; </div><div class="line">keystorePass=&quot;mypassword&quot;/&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>注意:<br>keystoreFile必须是绝对路径,不能像上面的指令中使用~/tomcatKeyStoreFile</strong></p>
+<p>##3.启动 Tomcat</p>
+<p><img src="./_image/2016-01-06 00-07-42.jpg" alt=""><br>在浏览器中访问测试: <a href="https://localhost:4443" target="_blank" rel="external">https://localhost:4443</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
   </section>
 
   
@@ -453,7 +558,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
