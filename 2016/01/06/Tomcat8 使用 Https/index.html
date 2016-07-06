@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -68,7 +68,7 @@
 <link href="/blog/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="swift, jingsan0801" />
 
 
 
@@ -100,9 +100,9 @@
 
 
 使用如下指令生成证书文件到指定路径:1keytool -genkey -a">
-<meta property="og:image" content="https://jeevan0801.github.io/blog/./_image/2016-01-06 00-02-35.jpg">
-<meta property="og:image" content="https://jeevan0801.github.io/blog/./_image/2016-01-06 00-07-42.jpg">
-<meta property="og:updated_time" content="2016-07-06T05:23:37.000Z">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/72f96cbajw1f5k4h5zl19j21kw05ddkf.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/72f96cbajw1f5k4hmfeioj21kw02wmzs.jpg">
+<meta property="og:updated_time" content="2016-07-06T05:29:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Reading">
 <meta name="twitter:description" content="Tomcat8 使用 Https1. 使用 JDK 工具生成证书文件使用 JDK 的keytool工具, 这个命令和java在一个目录下, mac 下的路径在: 
@@ -111,14 +111,14 @@
 
 
 使用如下指令生成证书文件到指定路径:1keytool -genkey -a">
-<meta name="twitter:image" content="https://jeevan0801.github.io/blog/./_image/2016-01-06 00-02-35.jpg">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/72f96cbajw1f5k4h5zl19j21kw05ddkf.jpg">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -298,12 +298,12 @@
 <blockquote>
 <p>/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/keytool</p>
 </blockquote>
-<p><img src="./_image/2016-01-06 00-02-35.jpg" alt=""></p>
+<p><img src="http://ww3.sinaimg.cn/large/72f96cbajw1f5k4h5zl19j21kw05ddkf.jpg" alt="2016-01-06 00-02-35.jpg"></p>
 <p>使用如下指令生成证书文件到指定路径:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -alias tomcat -keyalg  RSA -keystore ~/tomcatKeyStoreFile -validity 2000</div></pre></td></tr></table></figure></p>
 <p>然后就会在当前用户的根目录下生成一个<code>tomcatKeyStoreFile</code>的文件.</p>
 <h2 id="2-Server-xml-的配置"><a href="#2-Server-xml-的配置" class="headerlink" title="2.Server.xml 的配置"></a>2.Server.xml 的配置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> &lt;Connector port=&quot;8443&quot; </div><div class="line">protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;</div><div class="line">maxThreads=&quot;150&quot; SSLEnabled=&quot;true&quot; scheme=&quot;https&quot; secure=&quot;true&quot;</div><div class="line">clientAuth=&quot;false&quot; sslProtocol=&quot;TLS&quot;</div><div class="line">keystoreFile=&quot;/Users/xxx/tomcatKeyStoreFile&quot; </div><div class="line">keystorePass=&quot;mypassword&quot;/&gt;</div></pre></td></tr></table></figure>
 <p><strong>注意:<br>keystoreFile必须是绝对路径,不能像上面的指令中使用~/tomcatKeyStoreFile</strong></p>
-<h2 id="3-启动-Tomcat"><a href="#3-启动-Tomcat" class="headerlink" title="3.启动 Tomcat"></a>3.启动 Tomcat</h2><p><img src="./_image/2016-01-06 00-07-42.jpg" alt=""><br>在浏览器中访问测试: <a href="https://localhost:4443" target="_blank" rel="external">https://localhost:4443</a></p>
+<h2 id="3-启动-Tomcat"><a href="#3-启动-Tomcat" class="headerlink" title="3.启动 Tomcat"></a>3.启动 Tomcat</h2><p><img src="http://ww2.sinaimg.cn/large/72f96cbajw1f5k4hmfeioj21kw02wmzs.jpg" alt="2016-01-06 00-07-42.jpg"><br>在浏览器中访问测试: <a href="https://localhost:4443" target="_blank" rel="external">https://localhost:4443</a></p>
 
       
     </div>
@@ -467,7 +467,7 @@
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Mist
   </a>
 </div>
 
